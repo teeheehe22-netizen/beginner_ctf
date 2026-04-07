@@ -1,3 +1,4 @@
-Hello! Welcome to my first ctf challenge! Look through the files, find the flag, complete the challenge. Good luck!
+Hello! Welcome to my first ctf challenge! Look through the files, find the four flags, complete the challenge. Good luck!
 
-We found a suspicous file, can you figure out what it means?
+
+Oh no! Looks like the power is out! Maybe the flags are still there...
