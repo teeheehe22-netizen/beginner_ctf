@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nothing to See Here</title>
+
+  <style>
+    body {
+      background-color: black;
+      color: black;
+      margin: 0;
+      font-family: monospace;
+      overflow: hidden;
+    }
+
+    /* Fake content */
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Hidden flag (visible on highlight) */
+    .hidden-flag::selection {
+      background: white;
+      color: black;
+    }
+
+    /* Tiny pixel in corner */
+    .corner-flag {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      font-size: 10px;
+      color: #010101; /* barely visible */
+    }
+
+    /* Hover reveal */
+    .hover-zone {
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      width: 100px;
+      height: 100px;
+    }
+
+    .hover-zone:hover::after {
+      content: "flag{hover_to_find_me}";
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <p class="hidden-flag">
+      flag{highlight_me}
+    </p>
+  </div>
+
+  <div class="corner-flag">
+    flag{tiny_corner}
+  </div>
+
+  <div class="hover-zone"></div>
+
+  <!-- Hidden in HTML comment -->
+  <!-- flag{inspect_source} -->
+
+</body>
+</html>
